@@ -10,17 +10,8 @@ namespace Task_1
     {
         static void Main(string[] args)
         {
-            int formatDuration = 0;
-            try
-            {
-                formatDuration = int.Parse(Console.ReadLine());
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Try again.");
-                return;
-            }
-
+            int formatDuration = int.Parse(Console.ReadLine());
+            
             if (formatDuration <= 0)
             {
                 Console.WriteLine("now");
