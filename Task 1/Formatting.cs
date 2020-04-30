@@ -9,27 +9,14 @@ namespace Task_1
 {
     class Formatting
     {
-        public int formatDuration;
-        public StringBuilder answer;
-
-        public void Calculations()
+        public string Calculations(int formatDuration)
         {
-            Console.Write("Enter your time in seconds: ");
-            formatDuration = 0;
-            while (!int.TryParse(Console.ReadLine(), out formatDuration))
-            {
-                Console.Clear();
-                Console.WriteLine("Please, use integer for time display.");
-            }
-            
             if (formatDuration <= 0)
             {
-                Console.WriteLine("now");
-                return;
+                return "now";
             }
-
             int years, days, hours, minutes, seconds;
-            answer = new StringBuilder();
+            StringBuilder answer = new StringBuilder();
 
             TimeSpan t = TimeSpan.FromSeconds(formatDuration);
             years = t.Days / 365;
@@ -63,7 +50,7 @@ namespace Task_1
             int idx = answer.ToString().LastIndexOf(",");
             if (idx > 0) answer.Remove(idx, 2).Insert(idx, " and ");
 
-            Console.WriteLine(answer);
+            return answer.ToString();
         }
     }
 }
