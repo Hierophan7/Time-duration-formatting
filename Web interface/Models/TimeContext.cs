@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 
-namespace Task_1
+namespace Web_interface
 {
     class TimeContext : DbContext
     {
