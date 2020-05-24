@@ -13,7 +13,6 @@ namespace Task_1
         {
             Database.SetInitializer(new TimeInitializer());
         }
-
         public DbSet<Time> Times { get; set; }
     }
 }
