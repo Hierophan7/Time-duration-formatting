@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Calculations;
+using TimeDBContext;
 
 namespace Web_interface.Controllers
 {
@@ -22,9 +23,11 @@ namespace Web_interface.Controllers
             if (int.TryParse(Request["Time"].ToString(), out formatDuration))
             {
                 ViewBag.OutputData = TimeCalculations.Calculations(formatDuration);
-                db.Times.Add (new Time() { Output = ViewBag.OutputData });
+                db.Times.Add(new Time() { Output = ViewBag.OutputData });
                 db.SaveChanges();
-            } else {
+            }
+            else
+            {
                 ViewBag.OutputData = "The number is too large or wrong input data.";
             }
             return View("Index", db.Times.ToList().Reverse<Time>().Take(5).Reverse());

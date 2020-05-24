@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using TimeModel;
 
-namespace Task_1
+namespace TimeDBContext
 {
     class TimeInitializer : DropCreateDatabaseIfModelChanges<TimeContext>
     {

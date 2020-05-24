@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task_1
+namespace TimeDBContext
 {
-    class Time
+    public class Time
     {
         public int Id { get; set; }
         public string Output { get; set; }

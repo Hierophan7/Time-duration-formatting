@@ -1,57 +1,55 @@
-﻿@model IEnumerable<Web_interface.Time>
+﻿@model IEnumerable<TimeDBContext.Time>
 
 <div class="jumbotron">
     <h2>Time duration formatting</h2>
 
     @using (Html.BeginForm("TimeFormatting", "Home", FormMethod.Post))
     {
-    <div class="row">
+        <div class="row">
 
-        <style>
-            ul li {
-                list-style-type: none;
-                margin-top: 15px;
-                font-size: 20px;
-            } 
-        </style>
-
-        <div class="col-md-6 " style=" display: flex; flex-direction: column;">
-            <ul>
-                <li>
-                    @Html.Label("Enter time in seconds:")
-                </li>
-                <li>
-                    @Html.TextBox("Time")
-                </li>
-                <li>
-                    <input type="submit" value="Compute" name="CalcButton" />
-                </li>
-                <li>
-                    @ViewBag.OutputData
-                </li>
-            </ul>
-        </div>
-
-
-
-        <div class="col-md-6 ">
-            <table class="table">
-                <tr>
-                    <th>
-                        Last five elements in database:
-                    </th>
-                </tr>
-
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Output)
-                        </td>
-                    </tr>
+            <style>
+                ul li {
+                    list-style-type: none;
+                    margin-top: 15px;
+                    font-size: 20px;
                 }
-            </table>
+            </style>
+
+            <div class="col-md-6 " style=" display: flex; flex-direction: column;">
+                <ul>
+                    <li>
+                        @Html.Label("Enter time in seconds:")
+                    </li>
+                    <li>
+                        @Html.TextBox("Time")
+                    </li>
+                    <li>
+                        <input type="submit" value="Compute" name="CalcButton" />
+                    </li>
+                    <li>
+                        @ViewBag.OutputData
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 ">
+                <table class="table">
+                    <tr>
+                        <th>
+                            Last five elements in database:
+                        </th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Output)
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
         </div>
-    </div>
     }
 </div>
