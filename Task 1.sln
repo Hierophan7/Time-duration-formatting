@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeDBContext", "TimeDBCont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web interface", "Web interface\Web interface.csproj", "{AE830A44-DCAC-45B7-B5EB-FE12DB159C70}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desktop interface", "Desktop interface\Desktop interface.csproj", "{9A7321C8-AAF8-4B5A-879D-56079B3E3708}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{AE830A44-DCAC-45B7-B5EB-FE12DB159C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE830A44-DCAC-45B7-B5EB-FE12DB159C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE830A44-DCAC-45B7-B5EB-FE12DB159C70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A7321C8-AAF8-4B5A-879D-56079B3E3708}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A7321C8-AAF8-4B5A-879D-56079B3E3708}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A7321C8-AAF8-4B5A-879D-56079B3E3708}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A7321C8-AAF8-4B5A-879D-56079B3E3708}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
